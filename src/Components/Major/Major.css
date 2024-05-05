@@ -1,0 +1,144 @@
+.major{
+  min-height: 100vh;
+  flex: 1;
+  position: relative;
+  padding-bottom: 15vh;
+  background-color: #caf0f8;
+}
+.major .navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  padding: 20px;
+
+}
+.major .navbar img{
+  width: 60px;
+  border-radius: 50%;
+}
+.major-container{
+  max-width: 900px;
+  margin: auto;
+}
+.major .greet{
+  margin: 50px;
+  font-size: 56px;
+  color: black;
+  font-weight: 500;
+  padding: 20px;
+}
+.major .greet span{
+  background: -webkit-linear-gradient(16deg,#06a77d,#679436,#679436);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.major-bottom{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 900px;
+  padding: 0px 20px;
+  margin: auto;
+}
+.search-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #ade8f4;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+.search-box img{
+  
+  width: 24px;
+  cursor: pointer;
+}
+.search-box input{
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+}
+.search-box div{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.major .bottom_info{
+  font-size: 13px;
+  margin: 15px auto;
+  text-align: center;
+  font-weight: 300;
+}
+.result{
+  padding: 0px 5%;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+.result::-webkit-scrollbar{
+  display: none;
+}
+.result-title{
+  margin: 40px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.result img{
+  width: 40px;
+  border-radius: 50%;
+}
+.result-data{
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+.loader{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.loader hr{
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(199, 187, 14);
+  background: linear-gradient(to right,rgb(117, 194, 224), rgb(174, 238, 238), rgba(96, 182, 231, 0.651));
+  background-size: 800px 50px;
+  height: 20px;
+  animation: loader 3s infinite linear;
+}
+@keyframes loader {
+  0%{
+    background-position: -800px 0px;
+  }
+  100%{
+    background-position: 800px 0px;
+  }
+}
+.result-data p{
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+@media (max-width:600px){
+  .major-bottom input{
+flex: none;
+width: 150px;
+  }
+  .major-bottom img{
+    width: 20px;
+  }
+  .search-box{
+    padding: 5px 10px;
+  }
+  .search-box div{
+    gap: 5px;
+  }
+}
